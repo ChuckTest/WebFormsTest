@@ -14,8 +14,10 @@
         <input type="button" id="Button45" name="Button45" onclick="javascript:__doPostBack('ButtonA','')" value="clicking this will run ButtonA.Click Event Handler" /><br /><br />
         <input type="button" id="Button46" name="Button46" onclick="javascript:__doPostBack('ButtonB','')" value="clicking this will run ButtonB.Click Event Handler" /><br /><br />
 
-        <asp:Button runat="server" ID="ButtonA" ClientIDMode="Static" Text="ButtonA" /><br /><br />
-        <asp:Button runat="server" ID="ButtonB" ClientIDMode="Static" Text="ButtonB" />
+        <asp:Button runat="server" ID="ButtonA" ClientIDMode="Static" Text="ButtonA" UseSubmitBehavior="False"/>
+        <br />
+        <br />
+        <asp:Button runat="server" ID="ButtonB" ClientIDMode="Static" Text="ButtonB" UseSubmitBehavior="False"/>
     </form>
 </body>
 </html>
