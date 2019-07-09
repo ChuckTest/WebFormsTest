@@ -7,14 +7,17 @@ namespace WebApplication1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            var value = Request.Form["__EVENTTARGET"];
+            Console.WriteLine(value);
+
+            Console.WriteLine(IsPostBack);
+
             ButtonA.Click += ButtonA_Click;
             ButtonB.Click += ButtonB_Click;
         }
 
         private void ButtonA_Click(object sender, EventArgs e)
         {
-            var value = Request.Form["__EVENTTARGET"];
-            Console.WriteLine(value);
             Response.Write("You ran the ButtonA click event");
         }
 
