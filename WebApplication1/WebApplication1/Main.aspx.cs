@@ -12,6 +12,9 @@ namespace WebApplication1
 
             Console.WriteLine(IsPostBack);
 
+            string controlName = Request.Params.Get("__EVENTTARGET");
+            Console.WriteLine(controlName);
+
             ButtonA.Click += ButtonA_Click;
             ButtonB.Click += ButtonB_Click;
         }
