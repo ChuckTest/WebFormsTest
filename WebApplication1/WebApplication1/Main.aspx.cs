@@ -1,17 +1,24 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 
 namespace WebApplication1
 {
-    public partial class Main : System.Web.UI.Page
+    public partial class Main : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ButtonA.Click += ButtonA_Click;
+            ButtonB.Click += ButtonB_Click;
+        }
 
+        private void ButtonA_Click(object sender, EventArgs e)
+        {
+            Response.Write("You ran the ButtonA click event");
+        }
+
+        private void ButtonB_Click(object sender, EventArgs e)
+        {
+            Response.Write("You ran the ButtonB click event");
         }
     }
 }
