@@ -13,6 +13,8 @@ namespace WebApplication1
 
         private void ButtonA_Click(object sender, EventArgs e)
         {
+            var value = Request.Form["__EVENTTARGET"];
+            Console.WriteLine(value);
             Response.Write("You ran the ButtonA click event");
         }
 
